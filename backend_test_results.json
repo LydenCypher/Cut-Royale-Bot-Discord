@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "total_tests": 18,
+    "passed": 17,
+    "failed": 1,
+    "success_rate": 94.44444444444444
+  },
+  "results": [
+    {
+      "test": "Root Endpoint",
+      "success": true,
+      "message": "Root endpoint responding correctly",
+      "details": {
+        "response": {
+          "message": "Cut Royale Discord Bot API"
+        }
+      },
+      "timestamp": "2025-07-28T20:58:18.553958"
+    },
+    {
+      "test": "Games Endpoint",
+      "success": true,
+      "message": "Games endpoint working, returned 0 games",
+      "details": {
+        "count": 0
+      },
+      "timestamp": "2025-07-28T20:58:18.563521"
+    },
+    {
+      "test": "Players Endpoint",
+      "success": true,
+      "message": "Players endpoint working, returned 0 players",
+      "details": {
+        "count": 0
+      },
+      "timestamp": "2025-07-28T20:58:18.573306"
+    },
+    {
+      "test": "Image Generation",
+      "success": true,
+      "message": "Image generation working",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.663583"
+    },
+    {
+      "test": "Image Gen - Medieval",
+      "success": true,
+      "message": "Generated image for medieval era",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.678415"
+    },
+    {
+      "test": "Image Gen - Modern",
+      "success": true,
+      "message": "Generated image for modern era",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1544717117-c2ac08b6a0a2?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.693309"
+    },
+    {
+      "test": "Image Gen - Futuristic",
+      "success": true,
+      "message": "Generated image for futuristic era",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.750059"
+    },
+    {
+      "test": "Image Gen - Wild_West",
+      "success": true,
+      "message": "Generated image for wild_west era",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.804612"
+    },
+    {
+      "test": "Image Gen - Zombie",
+      "success": true,
+      "message": "Generated image for zombie era",
+      "details": {
+        "image_url": "https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=800"
+      },
+      "timestamp": "2025-07-28T20:58:18.819158"
+    },
+    {
+      "test": "Game Logic - solo/medieval",
+      "success": true,
+      "message": "Successfully processed solo mode with medieval era",
+      "details": {},
+      "timestamp": "2025-07-28T20:58:18.874775"
+    },
+    {
+      "test": "Game Logic - duo/modern",
+      "success": true,
+      "message": "Successfully processed duo mode with modern era",
+      "details": {},
+      "timestamp": "2025-07-28T20:58:18.889179"
+    },
+    {
+      "test": "Game Logic - squad/futuristic",
+      "success": true,
+      "message": "Successfully processed squad mode with futuristic era",
+      "details": {},
+      "timestamp": "2025-07-28T20:58:18.903072"
+    },
+    {
+      "test": "Error Handling - Invalid Request",
+      "success": true,
+      "message": "Properly handled invalid request",
+      "details": {
+        "status": 422
+      },
+      "timestamp": "2025-07-28T20:58:18.952097"
+    },
+    {
+      "test": "Error Handling - 404",
+      "success": true,
+      "message": "Properly returns 404 for non-existent endpoint",
+      "details": {},
+      "timestamp": "2025-07-28T20:58:18.960376"
+    },
+    {
+      "test": "Performance - Root",
+      "success": true,
+      "message": "Response time: 0.05s",
+      "details": {
+        "response_time": 0.049539
+      },
+      "timestamp": "2025-07-28T20:58:19.009989"
+    },
+    {
+      "test": "Performance - Games",
+      "success": true,
+      "message": "Response time: 0.05s",
+      "details": {
+        "response_time": 0.050866
+      },
+      "timestamp": "2025-07-28T20:58:19.060913"
+    },
+    {
+      "test": "Performance - Players",
+      "success": true,
+      "message": "Response time: 0.01s",
+      "details": {
+        "response_time": 0.008784
+      },
+      "timestamp": "2025-07-28T20:58:19.069769"
+    },
+    {
+      "test": "CORS Configuration",
+      "success": false,
+      "message": "Missing CORS headers: ['Access-Control-Allow-Origin', 'Access-Control-Allow-Methods', 'Access-Control-Allow-Headers']",
+      "details": {
+        "headers": {
+          "Allow": "GET",
+          "Content-Length": "31",
+          "Content-Type": "application/json",
+          "Date": "Mon, 28 Jul 2025 20:58:18 GMT",
+          "Server": "uvicorn",
+          "Via": "1.1 google",
+          "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      "timestamp": "2025-07-28T20:58:19.117604"
+    }
+  ],
+  "timestamp": "2025-07-28T20:58:19.118410"
+}
