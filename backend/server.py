@@ -39,9 +39,8 @@ logger = logging.getLogger(__name__)
 
 # Discord Bot Setup
 intents = discord.Intents.default()
-intents.message_content = True
+intents.message_content = False  # Don't need message content for slash commands
 intents.guilds = True
-intents.guild_messages = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Game Models
