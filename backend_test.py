@@ -328,7 +328,7 @@ async def main():
             },
             "results": tester.test_results,
             "timestamp": datetime.now().isoformat()
-        }, indent=2)
+        }, f, indent=2)
     
     print(f"\n📄 Detailed results saved to: /app/backend_test_results.json")
     
