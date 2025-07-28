@@ -1,38 +1,179 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 .App {
-    text-align: center;
+  text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-link {
-    color: #61dafb;
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.7);
+}
+
+/* Glowing effects */
+.glow {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.8);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Battle royale themed colors */
+.bg-battle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.text-battle {
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Progress bars */
+.progress-bar {
+  background: linear-gradient(90deg, #ff6b6b 0%, #ee5a24 100%);
+  transition: width 0.3s ease;
+}
+
+/* Button styles */
+.btn-battle {
+  background: linear-gradient(45deg, #8b5cf6 0%, #3b82f6 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-battle:hover {
+  background: linear-gradient(45deg, #7c3aed 0%, #2563eb 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Table styles */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Discord-style elements */
+.discord-embed {
+  border-left: 4px solid #5865f2;
+  background: rgba(88, 101, 242, 0.1);
+}
+
+.status-online {
+  color: #57f287;
+}
+
+.status-offline {
+  color: #ed4245;
+}
+
+.status-idle {
+  color: #faa61a;
+}
+
+/* Game mode badges */
+.badge-solo {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+}
+
+.badge-duo {
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.badge-squad {
+  background: linear-gradient(45deg, #8b5cf6, #3b82f6);
+}
+
+/* Era themes */
+.era-medieval {
+  background: linear-gradient(45deg, #8d4925, #cd853f);
+}
+
+.era-modern {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+.era-futuristic {
+  background: linear-gradient(45deg, #00c9ff, #92fe9d);
+}
+
+.era-western {
+  background: linear-gradient(45deg, #d2691e, #f4a460);
+}
+
+.era-zombie {
+  background: linear-gradient(45deg, #2d5016, #4a7c59);
 }
