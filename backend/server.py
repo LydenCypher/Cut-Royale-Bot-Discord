@@ -557,7 +557,15 @@ async def generate_game_image(prompt: str, era: str) -> Optional[str]:
         return None
     except Exception as e:
         logger.error(f"Error generating image: {e}")
-        return None
+        # For demo purposes, return a placeholder image related to the era
+        placeholder_images = {
+            "medieval": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+            "modern": "https://images.unsplash.com/photo-1544717117-c2ac08b6a0a2?w=800", 
+            "futuristic": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+            "wild_west": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+            "zombie": "https://images.unsplash.com/photo-1520637836862-4d197d17c55a?w=800"
+        }
+        return placeholder_images.get(era, placeholder_images["modern"])
 
 # API Routes
 @api_router.get("/")
