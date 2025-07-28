@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "total_tests": 15,
+    "passed": 15,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "results": [
+    {
+      "test": "Database Connection",
+      "success": true,
+      "message": "Connected successfully, found 0 collections",
+      "details": {
+        "collections": []
+      },
+      "timestamp": "2025-07-28T20:59:28.580019"
+    },
+    {
+      "test": "Player Insert",
+      "success": true,
+      "message": "Player inserted successfully",
+      "details": {
+        "player_id": "ef1e490f-7a99-461f-b49e-313b0f3a0afb"
+      },
+      "timestamp": "2025-07-28T20:59:28.600028"
+    },
+    {
+      "test": "Player Find",
+      "success": true,
+      "message": "Player found successfully",
+      "details": {
+        "username": "TestPlayer"
+      },
+      "timestamp": "2025-07-28T20:59:28.601114"
+    },
+    {
+      "test": "Player Update",
+      "success": true,
+      "message": "Player stats updated successfully",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.601976"
+    },
+    {
+      "test": "Player Update Verification",
+      "success": true,
+      "message": "Player update verified",
+      "details": {
+        "new_kills": 6
+      },
+      "timestamp": "2025-07-28T20:59:28.602799"
+    },
+    {
+      "test": "Player Delete",
+      "success": true,
+      "message": "Player deleted successfully",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.603672"
+    },
+    {
+      "test": "Game Insert",
+      "success": true,
+      "message": "Game inserted successfully",
+      "details": {
+        "game_id": "e00dbb9b-ebb7-4ca4-8e3d-fd167b7da33d"
+      },
+      "timestamp": "2025-07-28T20:59:28.613568"
+    },
+    {
+      "test": "Game Query",
+      "success": true,
+      "message": "Found 1 active games including test game",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.614477"
+    },
+    {
+      "test": "Game Update",
+      "success": true,
+      "message": "Game status updated successfully",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.615190"
+    },
+    {
+      "test": "Game Delete",
+      "success": true,
+      "message": "Game deleted successfully",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.616075"
+    },
+    {
+      "test": "Game Action Insert",
+      "success": true,
+      "message": "Game action logged successfully",
+      "details": {
+        "action_id": "f60c8e6f-9856-43c7-b936-86d9a1b05080"
+      },
+      "timestamp": "2025-07-28T20:59:28.625749"
+    },
+    {
+      "test": "Game Action Query",
+      "success": true,
+      "message": "Found 1 actions for game",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.626512"
+    },
+    {
+      "test": "Game Action Delete",
+      "success": true,
+      "message": "Game action deleted successfully",
+      "details": {},
+      "timestamp": "2025-07-28T20:59:28.627187"
+    },
+    {
+      "test": "Player Indexes",
+      "success": true,
+      "message": "Found 1 indexes on players collection",
+      "details": {
+        "indexes": [
+          "_id_"
+        ]
+      },
+      "timestamp": "2025-07-28T20:59:28.627866"
+    },
+    {
+      "test": "Game Indexes",
+      "success": true,
+      "message": "Found 1 indexes on games collection",
+      "details": {
+        "indexes": [
+          "_id_"
+        ]
+      },
+      "timestamp": "2025-07-28T20:59:28.628472"
+    }
+  ],
+  "timestamp": "2025-07-28T20:59:28.629127"
+}
