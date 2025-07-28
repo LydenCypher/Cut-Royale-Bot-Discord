@@ -539,6 +539,9 @@ async def end_game(game_id: str):
 async def generate_game_image(prompt: str, era: str) -> Optional[str]:
     """Generate game images using FAL.ai"""
     try:
+        # Set FAL_KEY environment variable
+        os.environ["FAL_KEY"] = os.environ.get('FAL_KEY', '')
+        
         enhanced_prompt = f"{prompt}, {era} theme, game art style, high quality, detailed"
         
         handler = await fal_client.submit_async(
